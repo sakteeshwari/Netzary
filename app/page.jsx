@@ -14,7 +14,7 @@ export default function Home() {
       <Sidebar />
       <MainContent></MainContent>
       </div>
-      <div className="flex w-full m-4 xl:m-8 lg:m-6  shadow-md">
+      <div className="flex w-full m-2 md:m-4 xl:m-8 lg:m-6  shadow-md">
       <RightContent></RightContent>
       <Rightmsg></Rightmsg>
       </div>
