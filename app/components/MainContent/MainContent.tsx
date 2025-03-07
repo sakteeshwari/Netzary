@@ -12,11 +12,11 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-80 z-10  min-h-screen   bg-gray-100 px-6 py-6 shadow-md">
+    <div className="w-80 z-10 hidden 2xl:block  min-h-screen border-l border-l-gray-300  bg-gray-100 px-6 py-9">
       {/* Main Menu */}
-      <h2 className="text-gray-500 uppercase font-semibold text-xs mb-3">Main Menu</h2>
+      <h2 className="text-gray-500 uppercase font-semibold text-xs mb-6">Main Menu</h2>
       
-      <div className="space-y-2 pt-6 py-2">
+      <div className="space-y-2 pt-6 py-6">
         {/* Dashboard */}
         <button
           className="flex items-center justify-between  rounded-md   text-blue-600 font-bold  w-full"
@@ -32,7 +32,7 @@ const Sidebar = () => {
 
         {/* Applications */}
         <button
-          className="flex items-center pt-6 justify-between text-gray-600 py-2 w-full"
+          className="flex mt-4 items-center pt-6 justify-between text-gray-600 py-2 w-full"
           onClick={() => toggleSection("applications")}
         >
           <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ const Sidebar = () => {
 
         {/* Clients */}
         <button
-          className="flex items-center justify-between text-gray-600 py-2 w-full"
+          className="flex items-center mt-6 justify-between text-gray-600 py-2 w-full"
           onClick={() => toggleSection("clients")}
         >
           <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ const Sidebar = () => {
 
       {/* Projects Section */}
 
-      <div className="w-[270px] p-4 border-gray-200 rounded-xl shadow-xl">
+      <div className="w-[270px] p-4 pt-5 border-gray-200 rounded-xl shadow-xl">
       <button
           className="flex items-center justify-between w-full text-gray-700 font-semibold text-lg"
         >
@@ -79,8 +79,8 @@ const Sidebar = () => {
        
 
         {/* Submenu for Projects */}
-        {openSection === "projects" && (
-          <div className="mt-2  py-4 rounded-lg flex">
+       
+          <div className="   py-6 mt-6 rounded-lg flex">
             {/* Coca Cola Project */}
             <button
               className={`flex  items-center w-full  rounded-md text-blue-600 font-bold`}
@@ -97,9 +97,9 @@ const Sidebar = () => {
           </div>
           
           
-        )}
+        
         <hr className=" text-gray-300"/>
-         <div className=" space-y-2 mt-2 py-4 text-gray-600 text-sm">
+         <div className=" space-y-2 mt-2 py-8 text-gray-600 text-sm">
               <button className="flex items-center justify-between  w-full">
               <span className="flex items-center">
                 <span className="mr-2">•</span> Link Colors
@@ -107,14 +107,14 @@ const Sidebar = () => {
                 <MdChevronRight />
               </button>
 
-              <button className="flex items-center py-4 justify-between w-full text-blue-600 font-semibold">
+              <button className="flex items-center py-8 justify-between w-full text-blue-600 font-semibold">
                 <span className="flex items-center">
                   <span className="mr-2">•</span> Additional Content
                 </span>
                 <MdChevronRight />
               </button>
 
-              <button className="flex items-center justify-between pb-4 w-full">
+              <button className="flex items-center justify-between pb-8 w-full">
               <span className="flex items-center">
                 <span className="mr-2">•</span> Dismissing
                 </span>
@@ -131,7 +131,7 @@ const Sidebar = () => {
       </div>
 
       {/* Other Sections */}
-      <div className="mt-4 space-y-2 text-gray-600">
+      <div className="mt-12 space-y-8 text-gray-600">
         <button className="w-full text-left px-3 py-2 rounded-md"> <span className="mr-2">•</span>Zoom Projects</button>
         <button className="w-full text-left px-3 py-2 rounded-md"> <span className="mr-2">•</span>Task Board</button>
         <button className="w-full text-left px-3 py-2 rounded-md"> <span className="mr-2">•</span>Project Diagramma</button>
@@ -141,18 +141,22 @@ const Sidebar = () => {
 
  {/* Applications */}
  <button
-          className="flex items-center pt-6 justify-between text-gray-600 py-2 w-full"
+          className="flex items-center pt-6 mt-12 justify-between text-gray-600 py-2 w-full"
           onClick={() => toggleSection("applications")}
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center  gap-2">
             <FaBuilding />
             Applications
           </div>
           {openSection === "applications" ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
         </button>
+
+
+
+
          {/* Second Menu */}
-      <h2 className="text-gray-500 uppercase font-semibold text-xs mt-6 mb-3">Second Menu</h2>
-      <div className="space-y-2">
+      <h2 className="text-gray-500 uppercase font-semibold text-xs mt-20 mb-3">Second Menu</h2>
+      <div className="space-y-8 mt-10">
         <button
           className="flex items-center justify-between text-gray-600 py-2 w-full"
           onClick={() => toggleSection("integrations")}

@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import { Bell, Menu, Search, X, MoreHorizontal, User } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex sticky top-0 z-40 items-center justify-between px-2  py-3 shadow-md">
+    <nav className="flex sticky top-0 z-40 bg-gray-100 items-center justify-between px-2  py-3 shadow-md">
       {/* Left section */}
       <div className="flex items-center gap-9">
         <button
@@ -19,10 +20,10 @@ export default function Navbar() {
         <div className="hidden xl:flex space-x-5 text-gray-500">
           <a href="#" className="hover:text-black">Dashboard</a>
           <a href="#" className="hover:text-black">About Us</a>
-          <a href="#" className="hover:text-black">News</a>
+          <a href="#" className="hover:text-black  xl:hidden 2xl:block">News</a>
           <a href="#" className="hover:text-black">User Policy</a>
           <a href="#" className="hover:text-black">Contacts</a>
-          <MoreHorizontal className="w-5 h-5 cursor-pointer" />
+          <MoreHorizontal className="w-5 h-5 cursor-pointer xl:hidden 2xl:block" />
         </div>
       </div>
 
@@ -34,6 +35,7 @@ export default function Navbar() {
           placeholder="Search Transactions and Documents"
           className="ml-2 outline-none text-gray-500 bg-transparent text-sm w-76 "
         />
+        <ArrowRight className="w-5 h-5 text-gray-500" />
       </div>
 
       {/* Right section */}
